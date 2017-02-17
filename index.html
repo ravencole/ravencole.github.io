@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Raven Cole</title>
+    <link href="https://fonts.googleapis.com/css?family=Taviraj|Work+Sans" rel="stylesheet">
+    <style type="text/css">
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: Work Sans;
+        }
+        .main--heading {
+            color: white;
+            font-size: 100px;
+            padding: 10px 20px;
+            background-color: rgba(0,0,0,0.8);
+            border: 3px solid white;
+        }
+        .container {
+            width: 90%;
+            background-color: rgba(255,255,255,0.8);
+            box-shadow: 0 0 0 10px rgba(0,0,0,0.5);
+            box-sizing: border-box;
+        }
+        #svg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="main--heading">Raven Cole</h1>
+    <div class="container">
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+        <h3>ok</h3>
+    </div>
+    <svg id="svg" xmlns="http://www.w3.org/2000/svg">
+    </svg>
+    <script type="text/javascript">
+        var W_HEIGHT           = window.innerHeight,
+            W_WIDTH            = window.innerWidth,
+            SVG                = document.getElementById('svg'),
+            SVG_V              = "http://www.w3.org/2000/svg",
+            RECT_SIZE          = 30,
+            RECT_ROW_AMOUNT    = Math.ceil(W_HEIGHT / RECT_SIZE)
+            RECT_COLUMN_AMOUNT = Math.ceil(W_WIDTH / RECT_SIZE)
+
+        SVG.setAttributeNS(null, 'height', W_HEIGHT)
+        SVG.setAttributeNS(null, 'width', W_WIDTH)
+
+        for (var i = 0; i <= RECT_ROW_AMOUNT; i++) {
+            for (var k = 0; k <= RECT_COLUMN_AMOUNT; k++) {
+                var RECT   = document.createElementNS(SVG_V, 'rect'),
+                    STYLES = {
+                        x: k*RECT_SIZE,
+                        y: i*RECT_SIZE,
+                        height: RECT_SIZE,
+                        width: RECT_SIZE,
+                        stroke: 'black',
+                        'stroke-width': 1,
+                        fill: getRandomColor()
+                    }
+                    
+
+                Object.keys(STYLES).map(style => {
+                    RECT.setAttributeNS(null, style, STYLES[style])
+                })
+
+                SVG.appendChild(RECT)
+            }
+        }
+
+        function getRandomColor() {
+            return Array.apply(null, Array(6)).reduce((a,b) => `${a}${getRandomHexValue()}`, '#')
+        }
+
+        function getRandomHexValue() {
+            var NUM = Math.floor(Math.random() * (15+1))
+
+            return NUM > 9 ? 
+                String.fromCharCode(55 + NUM) :
+                `${NUM}`
+        }
+    </script>
+</body>
+</html>
