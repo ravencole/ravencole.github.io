@@ -18,8 +18,6 @@ export default (svg, props, done) => {
                   y: Y*RECT_SIZE + Y*1,
                   height: RECT_SIZE,
                   width: RECT_SIZE,
-                  stroke: 'black',
-                  'stroke-width': 0,
                   fill: getRandomColor()
               }
         
@@ -34,5 +32,5 @@ export default (svg, props, done) => {
         if (done)
             done()
         
-    }, (X+Y)*2)
+    }, (X+Y)*8)
 }
