@@ -23,13 +23,15 @@ export default (color, done, amountPerPass = 50) => {
         }
 
         for(let i = 0; i < amountPerPass; i++) {
-            const RECT = ALL_RECTS[0],
-                  COLOR = color === 'random' ?
-                          getRandomColor() :
-                          color
+            if (ALL_RECTS.length) {
+                const RECT = ALL_RECTS[0],
+                      COLOR = color === 'random' ?
+                              getRandomColor() :
+                              color
 
-            RECT.setAttributeNS(null, 'fill', COLOR)
-            ALL_RECTS.shift()
+                RECT.setAttributeNS(null, 'fill', COLOR)
+                ALL_RECTS.shift()
+            }
         }
     }.bind(this), 10)
 }

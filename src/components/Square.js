@@ -14,8 +14,8 @@ export default (svg, props, done) => {
     setTimeout(() => {
         const RECT   = document.createElementNS(SVG_V, 'rect'),
               STYLES = {
-                  x: X*RECT_SIZE + X*1,
-                  y: Y*RECT_SIZE + Y*1,
+                  x: X*RECT_SIZE + X,
+                  y: Y*RECT_SIZE + Y,
                   height: RECT_SIZE,
                   width: RECT_SIZE,
                   fill: getRandomColor()
