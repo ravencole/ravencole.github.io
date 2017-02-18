@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Raven Cole</title>
+    <link href="https://fonts.googleapis.com/css?family=Taviraj|Work+Sans" rel="stylesheet">
+    <style type="text/css">
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+        body {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            font-family: Work Sans;
+            background-color: black;
+        }
+        .main--heading {
+            color: black;
+            font-size: 100px;
+            padding: 10px 20px;
+            margin: 10px 0 0 0;
+            border-radius: 3px;
+            box-sizing: border-box;
+            transition: all 1600ms ease;
+        }
+        .main--heading:hover {
+            color: deepskyblue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .container {
+            width: 90%;
+            color: white;
+            box-sizing: border-box;
+            font-family: Taviraj;
+        }
+        #svg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+            opacity: 0;
+            transition: all 5000ms ease;
+            background-image: url('https://www.cdc.gov/features/dog-bite-prevention/dog-bite-prevention_456px.jpg');
+        }
+    </style>
+</head>
+<body>
+    <h1 class="main--heading">Raven Cole</h1>
+    <h1 class="main--heading"><i>Projects</i></h1>
+    <h1 class="main--heading"><i>Skills</i></h1>
+    <h1 class="main--heading"><i>Resume</i></h1>
+    <div class="background-image" id="backgroundImage"></div>
+    <svg id="svg" xmlns="http://www.w3.org/2000/svg">
+    </svg>
+    <script type="text/javascript" src="bundle.js"></script>
+</body>
+</html>
