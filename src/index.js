@@ -4,7 +4,7 @@ import BuildPage from './BuildPage'
 import backgroundToColor from './backgroundToColor'
 import loadBackgroundImage from './LoadBackgroundImage'
 import BuildNav from './BuildNav'
-// import Actions from './Actions'
+import NOTIFICATIONS from './Actions'
 // import * as EventListeners from './EventListeners'
 
 require('./styles/styles.scss')
@@ -15,18 +15,7 @@ const W_HEIGHT           = window.innerHeight,
       SVG_V              = "http://www.w3.org/2000/svg",
       RECT_SIZE          = 10,
       RECT_ROW_AMOUNT    = Math.ceil(W_HEIGHT / RECT_SIZE),
-      RECT_COLUMN_AMOUNT = Math.ceil(W_WIDTH / RECT_SIZE),
-      NOTIFICATIONS      = {
-                              BACKGROUND_BUILT: () => Events.publish('background-built'),
-                              HEADING_TO_WHITE: () => Events.publish('heading-to-white'),
-                              MOVE_PAGE_LEFT: () => Events.publish('move-page-left'),
-                              MOVE_PAGE_UP: () => Events.publish('move-page-up'),
-                              MOVE_PAGE_RIGHT: () => Events.publish('move-page-right'),
-                              INITIAL_ANIMATION_FINISHED: () => {
-                                Events.publish('heading-to-white')
-                                Events.publish('add-event-listeners')
-                              }
-                            }
+      RECT_COLUMN_AMOUNT = Math.ceil(W_WIDTH / RECT_SIZE)
 
 SVG.setAttributeNS(null, 'height', W_HEIGHT)
 SVG.setAttributeNS(null, 'width', W_WIDTH)
