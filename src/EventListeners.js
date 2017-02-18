@@ -1,7 +1,7 @@
 import Actions from './Actions'
+import Events from './Events'
 
-export function Init(Events) {
-  console.log('EL')
+export function InitEventListeners() {
   Events.subscribe('add-event-listeners',() => {
       document.body.addEventListener('keydown', (e) => {
         if (e.keyCode === 37)

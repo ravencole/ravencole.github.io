@@ -5,7 +5,7 @@ import backgroundToColor from './backgroundToColor'
 import loadBackgroundImage from './LoadBackgroundImage'
 import BuildNav from './BuildNav'
 import NOTIFICATIONS from './Actions'
-// import * as EventListeners from './EventListeners'
+import { InitEventListeners } from './EventListeners'
 
 require('./styles/styles.scss')
 
@@ -20,6 +20,8 @@ const W_HEIGHT           = window.innerHeight,
 SVG.setAttributeNS(null, 'height', W_HEIGHT)
 SVG.setAttributeNS(null, 'width', W_WIDTH)
 
+InitEventListeners()
+
 BuildPage(
     SVG, 
     { RECT_ROW_AMOUNT, RECT_COLUMN_AMOUNT },
@@ -29,7 +31,7 @@ BuildPage(
 Events.subscribe('background-built',() => {
     loadBackgroundImage()
     setTimeout(() => {
-        backgroundToColor('black', NOTIFICATIONS.HEADING_TO_WHITE)
+        backgroundToColor('black', NOTIFICATIONS.INITIAL_ANIMATION_FINISHED)
     }, 5000)
 })
 
@@ -39,18 +41,6 @@ Events.subscribe('heading-to-white',() => {
     ).map(n => n.style.color = 'white')
     BuildNav(RECT_ROW_AMOUNT, RECT_COLUMN_AMOUNT)
 })
-
-document.body.addEventListener('keydown', (e) => {
-  if (e.keyCode === 37)
-    NOTIFICATIONS.MOVE_PAGE_LEFT()
-  if (e.keyCode === 38)
-    NOTIFICATIONS.MOVE_PAGE_UP()
-  if (e.keyCode === 39)
-    NOTIFICATIONS.MOVE_PAGE_RIGHT()
-  if (e.keyCode === 40)
-    NOTIFICATIONS.MOVE_PAGE_LEFT()
-})
-// EventListeners.Init(Events)
 
 Events.subscribe('move-page-right',() => {
   document.querySelector('.container').style.left = '-200%'
