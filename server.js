@@ -1,27 +1,27 @@
+import open from 'open';
+import path from 'path';
 import express from 'express';
 import webpack from 'webpack';
-import path from 'path';
+
 import config from './webpack.config.dev';
-import open from 'open';
 
 require('dotenv').config({path: './.env'});
 
-const app = express();
-const compiler = webpack(config);
+const APP      = express(),
+      COMPILER = webpack(config)
 
-app.use(require('webpack-dev-middleware')(compiler, {
+APP.use(require('webpack-dev-middleware')(COMPILER, {
   noInfo: true,
   publicPath: config.output.publicPath
 }));
 
-app.use(express.static(__dirname + '/resources'));
-app.use(require('webpack-hot-middleware')(compiler));
+APP.use(require('webpack-hot-middleware')(COMPILER));
 
-app.get('*', function(req, res) {
+APP.get('*', function(req, res) {
   res.sendFile(path.join( __dirname, './src/index.html'));
 });
 
-app.listen(process.env.PORT, function(err) {
+APP.listen(process.env.PORT, function(err) {
   if (err) {
     console.log(err);
   } else {
