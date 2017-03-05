@@ -5,11 +5,11 @@ const PROGRESS_BARS = Array.prototype.slice.call(document.querySelectorAll(`.pro
 
 for(let i = 0; i < BOX_AMOUNT; i++) {
     PROGRESS_BARS.map(e => 
-        setTimeout(_ => e.appendChild(buildBox()), i*12)
+        setTimeout(_ => e.appendChild(buildBox()), i*8)
     )
 
     if (i === BOX_AMOUNT - 1) {
-        setTimeout(_ => buildContactInfo(), i*6)
+        setTimeout(_ => buildContactInfo(), i*4)
     }
 }
 const buildBox = () => {
