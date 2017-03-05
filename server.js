@@ -15,6 +15,7 @@ APP.use(require('webpack-dev-middleware')(COMPILER, {
   publicPath: config.output.publicPath
 }));
 
+APP.use(express.static(__dirname + '/src/styles'));
 APP.use(require('webpack-hot-middleware')(COMPILER));
 
 APP.get('*', function(req, res) {

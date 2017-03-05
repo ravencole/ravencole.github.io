@@ -1,87 +1,32 @@
 html,
 body {
-    padding: 0;
-    margin: 0;
-    height: 100%;
-}
-body {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    background-color: black;
-}
-.container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    font-family: Work Sans;
-    z-index: 10;
-    pointer-events:none;
-    transition: left 1000ms ease-in,
-                top 1000ms ease-in;
-    & > div {
-        height: 100vh;
-        width: 100vw;
-    }
-    & .container--main {
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    & .container--right {
-        position: absolute;
-        top: 0;
-        left: 200vw;
-    }
-    & .container--top {
-        position: absolute;
-        top: -200vh;
-        left: 0;
-    }
-}
-.page--container {
-    width: 95%;
-    color: white;
-    background-color: rgba(0,0,0,0.3);
-    padding: 10px;
-    margin: 0 auto;
-    & p {
-        font-family: Taviraj;
-    }
-}
-.main--heading {
-    color: black;
-    font-size: 100px;
-    padding: 10px 20px;
-    margin: 10px 0 0 0;
-    border-radius: 3px;
-    border: 1px solid transparent;
-    box-sizing: border-box;
-    transition: color 1600ms ease;
-    &:hover {
-        color: deepskyblue;
-        text-decoration: underline;
-        cursor: pointer;
-    }
-}
-#svg {
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-.background-image {
-    position: fixed;
-    top: 0;
-    left: 0;
     height: 100%;
     width: 100%;
-    background-size: cover;
-    background-position: center;
-    z-index: -2;
-    opacity: 0;
-    transition: all 5000ms ease;
-    background-image: url('https://www.cdc.gov/features/dog-bite-prevention/dog-bite-prevention_456px.jpg');
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.progress-bar {
+    display: flex;
+    box-sizing: border-box;
+    height: 10px;
+    margin-top: 5px;
+}
+.heading {
+    box-sizing: border-box;
+    font-family: monospace;
+    margin: 0;
+    padding: 20px 5px;
+}
+.box {
+    height: 100%;
+    flex: 1;
+    margin: 0 1px;
+    padding: 1px;
 }

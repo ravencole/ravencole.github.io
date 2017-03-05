@@ -16,12 +16,9 @@ export default {
   entry: './src/index',
   target: 'web',
   output: {
-    path: __dirname + '/dist',
+    path: __dirname,
     publicPath: '/',
     filename: 'bundle.js'
-  },
-  devServer: {
-    contentBase: './dist'
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
