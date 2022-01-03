@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Raven Cole Blog</title>
+    <link>https://ravencole.github.io/post/</link>
+    <description>Recent content in Posts on Raven Cole Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Jan 2022 11:10:16 -0500</lastBuildDate><atom:link href="https://ravencole.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MyPost</title>
+      <link>https://ravencole.github.io/post/mypost/</link>
+      <pubDate>Mon, 03 Jan 2022 11:10:16 -0500</pubDate>
+      
+      <guid>https://ravencole.github.io/post/mypost/</guid>
+      <description>Hello World This is the first post.
+And lets make sure the syntax highlighting works.
+console.log( [1,,2,3,4,5].reduce((a,b) =&amp;gt; a + b, 0) ) </description>
+    </item>
+    
+  </channel>
+</rss>
