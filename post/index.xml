@@ -6,9 +6,18 @@
     <description>Recent content in Posts on Raven Cole Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Jan 2022 11:10:16 -0500</lastBuildDate><atom:link href="https://ravencole.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Jan 2022 11:17:06 -0500</lastBuildDate><atom:link href="https://ravencole.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>MyPost</title>
+      <title>Second Post</title>
+      <link>https://ravencole.github.io/post/secondpost/</link>
+      <pubDate>Mon, 03 Jan 2022 11:17:06 -0500</pubDate>
+      
+      <guid>https://ravencole.github.io/post/secondpost/</guid>
+      <description>The Second Post has arrived! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor odio quam. Aliquam imperdiet diam sit amet nunc tempus dictum. Maecenas convallis placerat congue. Vestibulum arcu nibh, suscipit non vestibulum vitae, finibus in mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse erat eros, posuere quis tincidunt in, eleifend auctor elit. Donec elementum tincidunt mi, quis pretium turpis venenatis a. Sed rutrum quam sed ipsum varius, ac viverra nibh aliquet.</description>
+    </item>
+    
+    <item>
+      <title>My Post</title>
       <link>https://ravencole.github.io/post/mypost/</link>
       <pubDate>Mon, 03 Jan 2022 11:10:16 -0500</pubDate>
       
